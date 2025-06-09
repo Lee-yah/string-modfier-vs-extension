@@ -25,7 +25,7 @@ A powerful Visual Studio Code extension for quickly modifying strings using a va
 
 To install the String Modifier extension manually:
 
-1. Download the `.vsix` file [here](https://github.com/Lee-yah/string-modfier-vs-extension/releases/download/v0.0.1/string-modifier-0.0.1.vsix) or from the from the [releases page](https://github.com/Lee-yah/string-modfier-vs-extension/releases/tag/v0.0.1).
+1. Download the `.vsix` file [here](https://github.com/Lee-yah/string-modfier-vs-extension/releases/download/v0.0.1/string-modifier-0.0.1.vsix) or from the [releases page](https://github.com/Lee-yah/string-modfier-vs-extension/releases/tag/v0.0.1).
 2. Open Visual Studio Code.
 3. Go to the Extensions view by clicking the Extensions icon in the Activity Bar.
 4. Click the three-dot menu in the top right and select **Install from VSIX...**

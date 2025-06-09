@@ -1,0 +1,59 @@
+{
+  "name": "string-modifier",
+  "displayName": "String Modifier",
+  "description": "Omit and replace strings in text—perfect for formatting file paths when writing commit messages.",
+  "version": "0.0.1",
+  "publisher": "text-tools",
+  "license": "MIT",
+  "icon": "media/char_replace_transp_128.png",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "string-modifier-sidebar",
+          "title": "String Modifier",
+          "icon": "media/s_icon_128.png"
+        }
+      ]
+    },
+    "views": {
+      "string-modifier-sidebar": [
+        {
+          "type": "webview",
+          "id": "string-modifier.sidebar",
+          "name": "String Modifier",
+          "visibility": "visible"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.100.0",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.25.1"
+  },
+  "dependencies": {
+    "@vscode/codicons": "^0.0.36"
+  }
+}

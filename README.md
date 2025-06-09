@@ -49,9 +49,7 @@ This extension does not add any custom settings to VS Code.
 - Initial release with string replacement, character removal, slash conversion, and whitespace trimming features.
 
 ## License
-/**
- * @license
- * This project is licensed under the MIT License.
- * 
- * Read the full license here: [MIT License](./LICENSE)
- */
+
+This project is licensed under the MIT License.
+Read the full license here: [MIT License](./LICENSE)
+

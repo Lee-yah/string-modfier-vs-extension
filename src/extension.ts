@@ -176,6 +176,7 @@ resolveWebviewView(webviewView: vscode.WebviewView): void {
                 }
 
                 #result-content-area { 
+                    position: relative;
                     border: 1px solid var(--vscode-editorWidget-border);
                     min-height: 60px;
                     max-height: 300px;
@@ -211,10 +212,11 @@ resolveWebviewView(webviewView: vscode.WebviewView): void {
 
                 /* Utility classes */
                 .copy-button-container {
-                    position: fixed;
-                    margin-top: calc(var(--spacing-unit) * 0.4);
-                    right: 19px;
-                    z-index: 100;
+                    position: absolute;
+                    top: 0.5px;
+                    right: 3px;
+                    z-index: 102;
+                    padding: 2px;
                 }
 
                 .result-actions {
@@ -239,6 +241,7 @@ resolveWebviewView(webviewView: vscode.WebviewView): void {
                     width: 14px;
                     border: 1px solid var(--vscode-input-border);
                     outline: none;
+                    accent-color: var(--vscode-button-background);
                 }
                     
 
@@ -307,13 +310,13 @@ resolveWebviewView(webviewView: vscode.WebviewView): void {
 
                 <div class="result">
                     <h4>Result:</h4>
-                    <div id="operations" class="copy-button-container">
-                        <button id="copyBtn" class="action-btn" style="display: none;">
-                            <img src="${copyIconUri}" alt="Copy">
-                            <span class="tooltip" id="copyTooltip">Copied!</span>
-                        </button>
-                    </div>
                     <div id="result-content-area" style="display: none;">
+                        <div id="operations" class="copy-button-container">
+                            <button id="copyBtn" class="action-btn" style="display: none;">
+                                <img src="${copyIconUri}" alt="Copy">
+                                <span class="tooltip" id="copyTooltip">Copied!</span>
+                            </button>
+                        </div>
                         <p id="resultText"></p>
                     </div>            
                     <div class="error-area">
@@ -360,7 +363,7 @@ resolveWebviewView(webviewView: vscode.WebviewView): void {
                         elements.sourceInput.style.border = DEFAULT_BORDER;
                         elements.findStringInput.style.border = DEFAULT_BORDER;
                         elements.replaceStringInput.style.border = DEFAULT_BORDER;
-
+                        elements.cutPositionInput.style.border = DEFAULT_BORDER;
                         elements.isCutStringsInput.classList.remove('error');
                         elements.isConvertSlashInput.classList.remove('error');
                         elements.isTrimStartEndInput.classList.remove('error');
@@ -406,6 +409,9 @@ resolveWebviewView(webviewView: vscode.WebviewView): void {
                         
                         if (!isChecked) {
                             elements.cutPositionInput.value = '';
+                            elements.cutPositionInput.style.border = DEFAULT_BORDER;
+                            elements.errorMessage.textContent = '';
+                            elements.errorIcon.classList.remove('codicon', 'codicon-error');
                         }
                     }
 

@@ -2,10 +2,18 @@
   "name": "string-modifier",
   "displayName": "String Modifier",
   "description": "Omit and replace strings in text—perfect for formatting file paths when writing commit messages.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "text-tools",
   "license": "MIT",
   "icon": "media/char_replace_transp_128.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lee-yah/string-modfier-vs-extension.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Lee-yah/string-modfier-vs-extension/issues"
+  },
+  "homepage": "https://github.com/Lee-yah/string-modfier-vs-extension#readme",
   "engines": {
     "vscode": "^1.100.0"
   },

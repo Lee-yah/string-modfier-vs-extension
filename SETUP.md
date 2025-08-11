@@ -122,13 +122,36 @@ npm install
    - **Minor** (0.x.0): New features
    - **Major** (x.0.0): Breaking changes
 
-### Version Workflow
+### Complete Release Workflow
 ```bash
-# 1. Make changes
+# 1. Make changes to your code
 # 2. Update version in package.json
-# 3. Update CHANGELOG.md
+# 3. Update CHANGELOG.md with new version entry
 # 4. Compile and test
 npm run compile
-# 5. Package
+# 5. Package the extension
 vsce package
+# 6. Commit and push changes
+git add .
+git commit -m "feat: version x.x.x - description of changes"
+git push origin main
+# 7. Create GitHub release
 ```
+
+### Creating GitHub Release
+After packaging your extension:
+
+1. **Go to GitHub repository**: https://github.com/Lee-yah/string-modfier-vs-extension/releases
+2. **Click "Create a new release"**
+3. **Fill in release details**:
+   - **Tag version**: `vX.X.X` (e.g., v0.0.3)
+   - **Release title**: `Version X.X.X - Brief Description`
+   - **Description**: Copy content from CHANGELOG.md for this version
+4. **Attach the .vsix file**: Upload your `string-modifier-X.X.X.vsix` file
+5. **Click "Publish release"**
+
+### Update Documentation Links
+After creating the release, update download links:
+
+1. **README.md**: Update download links to point to latest version
+2. **Verify links work**: Test the download links in your README.md
